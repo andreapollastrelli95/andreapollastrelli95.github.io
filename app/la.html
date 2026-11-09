@@ -3,7 +3,7 @@
 <link rel="apple-touch-icon" href="icona.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <script>
 (function () {
-  var m = location.hash.match(/k=([A-Za-z0-9]+)/), K = m && m[1];
+  var m = (location.search + location.hash).match(/[?&#]k=([A-Za-z0-9]+)/), K = m && m[1];
   try { if (K) localStorage.setItem("app-personali-k", K); else K = localStorage.getItem("app-personali-k"); } catch (e) { }
   window.__K = K;
   window.__EXEC = "https://script.google.com/macros/s/AKfycbwGNlyEALI2nG59GxrIOmp0QXBRiq3GRxLf3EAKUr-9EQd6Fu0dv8NvaYNglKLm99L-3A/exec";
