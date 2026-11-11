@@ -21,7 +21,8 @@
     };
   }
   window.__run = runner(null, null);
-  if (!K) document.addEventListener("DOMContentLoaded", function () { document.body.innerHTML = '<p style="font:16px sans-serif;margin:24px">Link non valido: apri il link completo che trovi sul Desktop del PC.</p>'; });
+  // Senza la chiave personale nel link: si apre la demo pubblica con dati fittizi.
+  if (!K) { location.replace("https://andreapollastrelli95.github.io/archivi-ai-demo/"); return; }
 })();
 </script>
 
